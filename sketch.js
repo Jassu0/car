@@ -5,20 +5,20 @@ var playerCount;
 var allPlayers;
 var distance = 0;
 var database;
-var reset = 0;
 
 var form, player, game;
 
 var cars, car1, car2, car3, car4;
-var car1image, car2image, car3image, car4image, ground, track;
+
+var track, car1_img, car2_img, car3_img, car4_img;
 
 function preload(){
-track = loadImage("images/track.jpg");
-ground = loadImage("images/ground.png");
-car1image = loadImage("images/car1.png");
-car2image = loadImage("images/car2.png");
-car3image = loadImage("images/car3.png");
-car4image = loadImage("images/car4.png");
+  track = loadImage("../images/track.jpg");
+  car1_img = loadImage("../images/car1.png");
+  car2_img = loadImage("../images/car2.png");
+  car3_img = loadImage("../images/car3.png");
+  car4_img = loadImage("../images/car4.png");
+  ground = loadImage("../images/ground.png");
 }
 
 function setup(){
@@ -38,7 +38,7 @@ function draw(){
     clear();
     game.play();
   }
-  if(gameState == 2) {
+  if(gameState === 2){
     game.end();
   }
 }
